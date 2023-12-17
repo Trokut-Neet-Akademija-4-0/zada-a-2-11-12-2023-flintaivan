@@ -1,14 +1,44 @@
 body {
-    color: #333;
+    margin: 0;
+    color: #877d72;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
+    background-color: #FFFBF5;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-header, main, footer {
+header, main, footer, #header-image {
     margin: 0 auto;
     max-width: 991px;
+}
+/* #header-image {
+    background-image: url(../images/background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 40vh;
+} */
+#header-image {
+    background-image: url(../images/background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-image h1, #header-image p, #header-image button {
+    margin-top: 0.5rem;
+    text-align: center;
+    color: #F9F5E7;
+}
+#header-image a {
+    text-decoration: none;
+    color: #F9F5E7;
 }
 main {
     margin-top: 2rem;
@@ -28,15 +58,17 @@ li {
 }
 li a {
     text-decoration: none;
-    color: #333;
+    color: #A7727D;
 }
 li a:hover {
-    color: #666;
+    color: #877d72;
+    transition: 0.5s;
 }
 
 .logo {
     text-align: left;
-    width: 5%;
+    width: 10%;
+    margin-left: 1rem;
 }
 
 .links {
@@ -49,34 +81,50 @@ li a:hover {
 }
 
 .search input[type="search"] {
-    padding: 5px;
+    padding: 10px;
     margin-right: 5px;
+    background-color: #FFFBF5;
+    border: 1px solid #EDDBC7;
+    border-radius: 10px;
+    color: #877d72;
 }
-
-.button-black {
-    padding: 7px 15px;
-    background-color: #333;
+input, textarea {
+    padding: 30px;
+    background-color: #FFFBF5;
+    border: 1px solid #EDDBC7;
+    border-radius: 10px;
+    color: #877d72;
+}
+button {
+    padding: 11px 25px;
+    background-color: #A7727D;
     color: #fff;
     border: none;
+    border-radius: 10px;
     cursor: pointer;
 }
-
-
-.sbutton.button-black {
-    background-color: #666;
+button:hover {
+    color: #A7727D;
+    background-color: #EDDBC7;
+    transition: 0.5s;
 }
 
 /* Contact page */
 
 .left {
     float: left;
-    width: 60%;
+    width: 50%;
 }
 
 .right {
+    margin-top: 0.83rem;
     margin-left: 2rem;
     float: right;
-    width: 38%;
+    width: 40%;
+}
+.right img, .right .contact-info {
+    margin-left: 25%;
+    margin-right: 25%;
 }
 .clear {
     clear: both;
@@ -88,3 +136,73 @@ li a:hover {
 .mt {
     margin-top: 30px;
 }
+
+/* Services page */
+
+.main-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd; /* Dodajte border po želji */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodajte box-shadow po želji */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Povećajte sliku na hover */
+    filter: contrast(110%) brightness(100%) opacity(0.8); /* Dodajte filter efekt na hover */
+}
+
+/* About page */
+.service {
+    display: flex;
+    margin-bottom: 50px;
+    box-shadow: 1px 1px 20px;
+}
+
+.service img {
+    max-width: 30%;
+    height: auto;
+    border: 1px solid #ddd; /* Dodajte border po želji */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodajte box-shadow po želji */
+}
+
+.service-content {
+    flex: 1;
+    padding: 0 20px;
+}
+.service button {
+    float: right;
+    margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    background-color: #877d72;
+    color: #FFFBF5;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons a {
+    color: #FFFBF5;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #A7727D; /* Twitter blue color */
+}
+
